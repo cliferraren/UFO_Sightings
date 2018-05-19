@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Record of UFO Sightings">
+    <meta name="author" content="Clifford Ferraren">
+
+    <title>UFO Sightings</title>
+
+    <!-- Bootstrap 4.1 core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Script For filtering the search of Data -->
+    <script>
+        $(document).ready(function() {
+            var selectText = $.trim($("#mySelect option:selected").text());
+
+            if (selectText === "All") {
+                $("#searchKeyword").hide();
+                $("#search").hide();
+            } else {
+                $("#searchKeyword").show();
+                $("#search").show();
+            }
+        });
+    </script>
+</head>
+
+<body>
+   
+    <!-- Heading Section (Title) -->
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">UFO Sightings!</h1>
+            <p class="lead">WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth.
+            </p>
+        </div>
+    </section>
+
+   <!-- DropDown (Selection for Filter Search) -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select id="mySelect" class="form-control form-control-sm">
+                        <option id="all" value="all">All</option>
+                        <option id="datetime" value="datetime">Datetime</option>
+                        <option id="datetime" value="city">City</option>
+                        <option id="state" value="state">State</option>
+                        <option id="country" value="country">Country</option>
+                        <option id="shape" value="shape">Shape</option>
+                    </select>
+                    <input type="text" id="searchKeyword" class="form-control" aria-describedby="filterSearchKeyword" placeholder="Enter Search">
+
+                    <!-- Search Button ($searchBtn)-->
+                    <button id="search" class="btn btn-light">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table id="Data" class="table table-striped bordered">
+                    <thead>
+                        <tr>
+                            <th>Datetime</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Country</th>
+                            <th>Shape</th>
+                            <th>Duration(mins)</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- this tbody element, input field and button -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="pagination" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li>
+                <a class="pagination" href="#" id="next">Next</a>
+            </li>
+
+        </div>
+
+    </div>
+    
+   <!-- Disable/Enable Search Element (Default is ALL)-->
+   <!-- if not the default search filter, then will enable the
+   the input and button element-->
+    <script type="text/javascript">
+        $("#mySelect").change(function() {
+            var selectText = $.trim($("#mySelect option:selected").text());
+            if (selectText === "All") {
+                $("#search").hide();
+                $("#searchKeyword").hide();
+            } else {
+                $("#search").show();
+                $("#searchKeyword").show();
+            }
+        });
+    </script>
+
+    <!-- Load data.js
+    ================================================== -->
+    <script src="js/dataPart.js" type="text/javascript"></script>
+
+    <!-- Load index.js
+    ================================================== -->
+    <script src="js/index.js" type="text/javascript"></script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

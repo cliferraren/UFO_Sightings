@@ -1,0 +1,59 @@
+
+/*
+ * Jumbotron settings - Heading Element
+ */
+.jumbotron{
+    padding-top: 1rem;
+    padding-bottom: .75rem;
+    margin-bottom: 0;
+    background-color: #f4a64b;
+    margin-bottom: 3rem;
+}
+
+/*
+ * Jumbotron settings at small screen media
+ */
+@media (min-width: 768px) {
+    .jumbotron {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/*
+ * Alignment of the (UFO Sightings) text to center,
+ * color to white
+ */
+.jumbotron-heading {
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+/*
+ * Form-control  for the Search/Filter Elements
+ * Text-color to Black
+ */
+.form-control {
+  padding-top: .125rem;
+  display: inline-block;
+  width: 15rem;
+  padding-top: .125rem;
+  border-width: 0.1;
+  border-radius: 0.1;
+  margin-bottom: 1rem;
+}
+
+/*
+ * Table Header Background
+ */
+th {
+    background: #e9f0c2;
+}
+
+/*
+ * Pagination <prev> && <next>
+ */
+li {
+    padding: 1rem;
+}
